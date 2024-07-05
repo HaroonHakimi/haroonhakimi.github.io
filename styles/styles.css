@@ -5,7 +5,7 @@
 }
 
 body {
-  background: linear-gradient(190deg, #FF999C, white);
+  background: linear-gradient(190deg, #ff999c, white);
 }
 
 ul,
@@ -26,11 +26,40 @@ a {
   font-weight: 100;
 }
 
+.row {
+  padding: 0 48px;
+}
+
+.button {
+  padding: 12px;
+  background: #fd5c63;
+  color: black;
+  border-radius: 8px;
+  transition: 500ms ease-in-out;
+  border: none;
+}
+
+.button:hover {
+  background: #660000;
+  font-size: large;
+  cursor: pointer;
+  color: white;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  
+}
+
 .nav--wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 48px;
+  border: 1px;
+  background-color: rgba(255,255, 255, 0.3);
+  backdrop-filter: blur(5px);
 }
 
 .nav__title {
@@ -43,53 +72,90 @@ a {
 }
 
 .nav__link {
-   margin-right: 20px;
-   padding-right: 4px;
-   font-size: 18px;
-   color: black;
+  margin-right: 20px;
+  padding-right: 4px;
+  font-size: 18px;
+  color: black;
 }
 
 .nav__icon {
-   font-size: 24px;
+  font-size: 24px;
 }
 
-.nav__icon, .nav__link {
-   transition: 300ms ease-in-out;
+.nav__icon,
+.nav__link {
+  transition: 300ms ease-in-out;
 }
 
-
-.nav__icon:hover, .nav__link:hover {
-   color: white;
+.nav__icon:hover,
+.nav__link:hover {
+  color: white;
 }
 
 .nav__link:hover {
-   font-size: 20px;
+  font-size: 20px;
 }
 
 .nav__icon:hover {
-   cursor: pointer;
-   font-size: 26px;
-   animation: spin 500ms ease-in-out;
+  cursor: pointer;
+  font-size: 26px;
+  animation: spin 500ms ease-in-out;
+}
+
+.nav__icon:active,
+.nav__link:active {
+  font-size: 18px;
 }
 
 @keyframes spin {
-   25% {
-      rotate: 90deg;
-   }
-   50% {
-      rotate: 180deg;
-   }
-   75% {
-      rotate: 280deg;
-   }
-   100% {
-      rotate: 360deg;
-   }
+  25% {
+    rotate: 90deg;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  75% {
+    rotate: 280deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
 }
 
 #main {
-   height: calc(100vh - 100px);
-   /* background: linear-gradient(45deg, #FF999C, red); */
+  height: calc(100vh - 100px);
+  margin: 48px 0;
+}
+
+.header__title {
+  font-size: 48px;
+}
+
+.header__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 10px 8px rgb(0 0 0 / 60%);
+  box-shadow: offset-x offset-y blur-radius spread-radius color;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.header__image {
+  overflow: hidden;
+}
+
+.header__text {
+  margin-left: 24px;
+}
+
+.header__text--top {
+  margin-bottom: 48px;
+}
+
+.header__text-para {
+  font-size: 18px;
+  width: 80%;
 }
 
 .footer__icon {
