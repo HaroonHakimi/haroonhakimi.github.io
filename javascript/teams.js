@@ -7,6 +7,7 @@ console.log("javascript loaded");
 function getInput() {
   const input = searchInput.value;
   getTeamData(input);
+  console.log("getting input");
   return input;
 }
 
@@ -15,8 +16,8 @@ async function getTeamData(input) {
     `https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=${input}`
   );
   const data = await teamData.json();
-  console.log(data);
-  if (data.teams[0].strLogo) {
+
+  if (data?.teams[0]?.strLogo) {
     renderImage(data);
   } else {
     console.error("no image");
@@ -25,11 +26,15 @@ async function getTeamData(input) {
 }
 
 function renderImage(data) {
+
   const teams = data.teams;
 
-  const html = teams.map((team) => htmlSegment(team)).join("");
+  if (teams)  {
 
-  dataWrap.innerHTML = html;
+    const html = teams.map((team) => htmlSegment(team)).join("");
+  
+    dataWrap.innerHTML = html;
+  }
 }
 
 function htmlSegment(data) {
@@ -44,9 +49,8 @@ function htmlSegment(data) {
   `;
 }
 
-function viewPlayerDetails(teamId) {
-  localStorage.setItem("teamId", teamId);
-  window.location.href = "/pages/team-details.html";
+function viewTeamDetails(teamId) {
+  window.location.href = `/pages/team-detail.html?teamId=${teamId}`;
 }
 
 function renderTeams(event) {
@@ -54,3 +58,5 @@ function renderTeams(event) {
   getInput();
   searchInput.value = "";
 }
+
+

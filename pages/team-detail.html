@@ -26,20 +26,23 @@
         <ul class="nav__links">
           <a class="nav__link" href=""><li>Search</li></a>
           <a class="nav__link" href="#footer"><li>About Us</li></a>
-          <a class="nav__link" href="/pages/players.html"
-            ><li>Players Page</li></a
-          >
+          <a class="nav__link" href="/pages/teams.html"><li>Teams Page</li></a>
         </ul>
 
-        <div class="nav__icon"><i class="fa-regular fa-moon"></i></div>
+        <div class="nav__icon">
+          <i class="fa-regular fa-moon moon-icon"></i>
+          <i class="fa-regular fa-sun icon sun-icon"></i>
+        </div>
       </div>
     </nav>
 
     <main id="main">
       <div class="row header--wrapper">
-        <!-- <div class="header__content">
-          
-        </div> -->
+        <button
+        onclick="backToTeam()"
+         class="button">Back</button>
+
+        <div class="header__content team"></div>
       </div>
     </main>
 
@@ -87,7 +90,7 @@
         </div>
       </div>
     </footer>
-    <script src="/javascript/teams.js" ></script>
-
+    <script src="/javascript/team-details.js"></script>
+    <script src="/javascript/toggle.js"></script>
   </body>
 </html>

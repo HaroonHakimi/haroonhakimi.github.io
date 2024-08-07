@@ -38,43 +38,11 @@
 
     <main id="main">
       <div class="row header--wrapper">
-        <div class="header__content">
-          <img class="header__image" src="/images/players-image.svg" alt="" />
-          <div class="header__text">
-            <div class="header__text--top">
-              <h1 class="header__title">GET YOUR GAME ON</h1>
-              <div class="header__text-para">
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Cumque provident sunt obcaecati perspiciatis repellendus
-                  nesciunt tenetur consequuntur nam? Quasi, ipsam! small change
-                </p>
-              </div>
-            </div>
+        <button
+        onclick="backToPlayer()"
+         class="button">Back</button>
 
-            <button class="button">Search Now!</button>
-          </div>
-        </div>
-
-        <section id="search">
-          <div class="position__relative">
-            <form onsubmit="renderPlayers(event)">
-              <input
-                class="search__input"
-                type="text"
-                type="text"
-                placeholder="Search for your favourite team"
-              />
-              <button class="search__icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </form>
-          </div>
-        </section>
-
-        <section id="data__section">
-          <div class="data__wrapper"></div>
-        </section>
+        <div class="header__content player-info"></div>
       </div>
     </main>
 
@@ -122,7 +90,7 @@
         </div>
       </div>
     </footer>
-    <script src="/javascript/players.js"></script>
+    <script src="/javascript/player-details.js"></script>
     <script src="/javascript/toggle.js"></script>
   </body>
 </html>

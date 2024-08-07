@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   background: linear-gradient(190deg, #ff999c, white);
   background-repeat: no-repeat;
+  transition: 700ms ease-in-out;
 }
 
 ul,
@@ -24,6 +25,8 @@ li {
 a {
   text-decoration: none;
 }
+
+
 
 .white {
   color: white;
@@ -78,6 +81,7 @@ nav {
 .nav__title {
   font-family: "ESP";
   font-size: 20px;
+  cursor: pointer;
 }
 
 .nav__links {
@@ -94,6 +98,7 @@ nav {
 .nav__icon {
   font-size: 24px;
 }
+
 
 .nav__icon,
 .nav__link {
@@ -112,6 +117,7 @@ nav {
 .nav__icon:hover {
   cursor: pointer;
   font-size: 26px;
+  box-shadow: inset;
   animation: spin 500ms ease-in-out;
 }
 
@@ -339,4 +345,49 @@ footer li {
   height: 200px;
   background: black;
   content: none;
+}
+
+/* styles.css */
+body.dark-mode, footer.dark-mode {
+  background: linear-gradient(120deg, #333333, #121212);
+  color: #f5f5f5;
+}
+
+.dark-mode .header__content {
+  box-shadow: 2px 2px 10px 8px rgba(180, 180, 180, 0.6);
+}
+
+.dark-mode .data__image {
+  box-shadow: 2px 2px 10px 8px rgba(180, 180, 180, 0.6);
+}
+.moon-icon {
+  display: block;
+}
+
+.sun-icon {
+  display: none;
+}
+
+.dark-mode .moon-icon {
+  display: none;
+}
+
+.dark-mode .sun-icon {
+  display: block;
+}
+
+
+.player {
+  display: flex;
+  padding: 50px;
+}
+
+.player__top--section {
+  margin-right: 12px;
+
+}
+
+
+.player-info {
+  margin-top: 24px;
 }
