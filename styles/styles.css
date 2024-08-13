@@ -4,7 +4,8 @@
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   margin: 0;
 }
 
@@ -26,7 +27,9 @@ a {
   text-decoration: none;
 }
 
-
+.no-cursor {
+  cursor: not-allowed;
+}
 
 .white {
   color: white;
@@ -65,7 +68,6 @@ button {
 nav {
   position: sticky;
   top: 0;
-  
 }
 
 .nav--wrapper {
@@ -74,7 +76,7 @@ nav {
   align-items: center;
   padding: 12px 48px;
   border: 1px;
-  background-color: rgba(255,255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(5px);
 }
 
@@ -98,7 +100,6 @@ nav {
 .nav__icon {
   font-size: 24px;
 }
-
 
 .nav__icon,
 .nav__link {
@@ -144,7 +145,6 @@ nav {
 #main {
   flex: 1;
   margin: 48px 0 0 0;
-  
 }
 
 .header--wrapper {
@@ -190,7 +190,6 @@ nav {
   margin-top: 100px;
 }
 
-
 .search__input {
   width: 700px;
   padding: 24px;
@@ -218,7 +217,6 @@ nav {
 
 .position__relative {
   position: relative;
-
 }
 
 .search__icon {
@@ -226,6 +224,7 @@ nav {
   bottom: 35%;
   right: 3%;
   font-size: 20px;
+  cursor: pointer;
 }
 
 #data__section {
@@ -245,7 +244,6 @@ img {
   margin: 12px;
   border: 2px solid black;
 }
-
 
 .data__image {
   position: relative;
@@ -338,8 +336,6 @@ footer li {
   line-height: 1.5;
 }
 
-
-
 .hover__wrapper {
   width: 200px;
   height: 200px;
@@ -348,7 +344,8 @@ footer li {
 }
 
 /* styles.css */
-body.dark-mode, footer.dark-mode {
+body.dark-mode,
+footer.dark-mode {
   background: linear-gradient(120deg, #333333, #121212);
   color: #f5f5f5;
 }
@@ -376,7 +373,6 @@ body.dark-mode, footer.dark-mode {
   display: block;
 }
 
-
 .player {
   display: flex;
   padding: 50px;
@@ -384,10 +380,103 @@ body.dark-mode, footer.dark-mode {
 
 .player__top--section {
   margin-right: 12px;
-
 }
-
 
 .player-info {
   margin-top: 24px;
+}
+
+.scroll {
+  opacity: 1;
+  visibility: visible;
+  transition: all 800ms 200ms;
+  
+  transform: translateX(-50%);
+  margin-top: 100px;
+}
+
+.scroll__icon {
+  width: 20px;
+  height: 30px;
+  border: 2px solid #242424;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll__icon::after {
+  content: "";
+  width: 4px;
+  height: 6px;
+  background-color: #242424;
+  border-radius: 2px;
+  animation: scroll 1000ms infinite alternate-reverse;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+
+.dark-mode .scroll__icon {
+  border-color: white;
+}
+
+.dark-mode .scroll__icon::after,
+.dark-mode .link__hover-effect--black:after {
+  background-color: white;
+}
+
+.team__button {
+  margin-bottom: 48px;
+}
+
+.data__error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.error__title {
+  font-size: 28px;
+}
+
+.red {
+  color: #fd5c63;
+}
+
+
+.loading__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.loading__img, .loading__text {
+ font-size: 32px;
+}
+
+.loading__wrapper::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

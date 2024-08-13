@@ -42,7 +42,6 @@ function renderPlayerDetails(player) {
     <div class="player__bottom--section">
       <h2>${player.strPlayer}</h2>
       <p>Nationality: ${player.strNationality}</p>
-      <p>Age: ${player.strNumber}</p>
       <p>Team: ${player.strTeam}</p>
       <p>Active: ${player.strStatus}</p>
       </div>

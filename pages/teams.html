@@ -54,9 +54,15 @@
               </div>
             </div>
 
-            <button class="button">Search Now!</button>
+            <a href="#search">
+              <button class="button">Search Now!</button>
+            </a>
           </div>
         </div>
+
+        <a href="#search" class="scroll">
+          <div class="scroll__icon click"></div>
+        </a>
 
         <section id="search">
           <div class="position__relative">
@@ -67,7 +73,9 @@
                 type="text"
                 placeholder="Search for your favourite team"
               />
-              <button class="search__icon">
+              <button
+              onclick="renderTeams(event)"
+               class="search__icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
@@ -98,7 +106,7 @@
             <h3>Products</h3>
             <ul>
               <li>Search Bar</li>
-              <li>Login</li>
+              <li class="no-cursor">Login</li>
             </ul>
           </div>
           <div>
