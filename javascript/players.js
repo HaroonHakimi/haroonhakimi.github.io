@@ -50,7 +50,7 @@ function getInput() {
 }
 
 async function getPlayerData(input) {
-dataWrap.classList.add('.loading__wrapper')
+dataWrap.classList.add('loading__wrapper')
 
   const playerData = await fetch(
     `https://www.thesportsdb.com/api/v1/json/${KEY}/searchplayers.php?p=${input}`

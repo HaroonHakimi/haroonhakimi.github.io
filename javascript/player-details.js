@@ -37,7 +37,7 @@ function renderPlayerDetails(player) {
     const html = `
     <div class="player">
     <div class="player__top--section">
-    <img src="${player.strCutout}" alt="${player.strCutout}" width="300"/>
+    <img class="player__image" src="${player.strCutout}" alt="${player.strCutout}" width="300"/>
     </div>
     <div class="player__bottom--section">
       <h2>${player.strPlayer}</h2>

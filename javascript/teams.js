@@ -59,7 +59,7 @@ function htmlSegment(data) {
 }
 
 function viewTeamDetails(teamId) {
-  window.location.href = `/pages/team-detail.html?teamId=${teamId}`;
+  window.location.href = `/pages/teams-details.html?teamId=${teamId}`;
 }
 
 function renderTeams(event) {

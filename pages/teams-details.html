@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Details</title>
     <script
       src="https://kit.fontawesome.com/304ba84b06.js"
       crossorigin="anonymous"
@@ -16,7 +17,6 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
   </head>
   <body>
     <nav>
@@ -24,8 +24,8 @@
         <div class="nav__title">The Dream Team</div>
 
         <ul class="nav__links">
-          <a class="nav__link" href=""><li>Search</li></a>
-          <a class="nav__link" href="#footer"><li>About Us</li></a>
+          <a class="nav__link nav__link--optional" href="#search"><li>Search</li></a>
+          <a class="nav__link nav__link--optional" href="#footer"><li>About Us</li></a>
           <a class="nav__link" href="/pages/teams.html"><li>Teams Page</li></a>
         </ul>
 
@@ -38,9 +38,7 @@
 
     <main id="main">
       <div class="row header--wrapper">
-        <button
-        onclick="backToTeam()"
-         class="button team__button">Back</button>
+        <button onclick="backToTeam()" class="button team__button">Back</button>
 
         <div class="header__content team"></div>
       </div>
@@ -90,7 +88,7 @@
         </div>
       </div>
     </footer>
-    <script src="/javascript/team-details.js"></script>
-    <script src="/javascript/toggle.js"></script>
+    <script src="/javascript/team-details.js" defer></script>
+    <script src="/javascript/toggle.js" defer></script>
   </body>
 </html>
