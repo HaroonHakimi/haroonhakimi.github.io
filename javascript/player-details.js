@@ -53,5 +53,5 @@ function renderPlayerDetails(player) {
 }
 
 function backToPlayer() {
-  window.location.href = `/players.html`;
+  window.location.href = `/index.html`;
 }

@@ -24,11 +24,13 @@
         <div class="nav__title">The Dream Team</div>
 
         <ul class="nav__links">
-          <a class="nav__link nav__link--optional" href="#search"><li>Search</li></a>
-          <a class="nav__link nav__link--optional" href="#footer"><li>About Us</li></a>
-          <a class="nav__link" href="/players.html"
-            ><li>Players Page</li></a
+          <a class="nav__link nav__link--optional" href="#search"
+            ><li>Search</li></a
           >
+          <a class="nav__link nav__link--optional" href="#footer"
+            ><li>About Us</li></a
+          >
+          <a class="nav__link" href="/index.html"><li>Players Page</li></a>
         </ul>
 
         <div class="nav__icon">
@@ -44,12 +46,13 @@
           <img class="header__image" src="/images/teams-image.svg" alt="" />
           <div class="header__text">
             <div class="header__text--top">
-              <div class="header__title">GET YOUR GAME ON</div>
+              <h1 class="header__title">GET YOUR <span class="red">GAME ON</h1>
               <div class="header__text-para">
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Cumque provident sunt obcaecati perspiciatis repellendus
-                  nesciunt tenetur consequuntur nam? Quasi, ipsam! small change
+                  Discover your favorite sports teams and players with ease!
+                  Search for detailed profiles, stats, and updates on our
+                  user-friendly platform. Dive into the world of sports and stay
+                  informed!
                 </p>
               </div>
             </div>
@@ -73,9 +76,7 @@
                 type="text"
                 placeholder="Search for your favourite team"
               />
-              <button
-              onclick="renderTeams(event)"
-               class="search__icon">
+              <button onclick="renderTeams(event)" class="search__icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
@@ -83,9 +84,7 @@
         </section>
 
         <section id="data__section">
-          <div class="data__wrapper">
-            
-          </div>
+          <div class="data__wrapper"></div>
         </section>
       </div>
     </main>
@@ -134,8 +133,7 @@
         </div>
       </div>
     </footer>
-    <script src="/javascript/teams.js" ></script>
+    <script src="/javascript/teams.js"></script>
     <script src="/javascript/toggle.js"></script>
-
   </body>
 </html>
